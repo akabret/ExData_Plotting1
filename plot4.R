@@ -6,7 +6,7 @@ hpc2 <- hpc[hpc$Date == "1/2/2007" | hpc$Date == "2/2/2007",]
 
 # Chart 4 -- This is little more than a combination of four charts, including two from above.
 # Note the mfrow parameter which specifies a 2x2 grid.
-par(mfrow = c(2,2))
+par(mfrow = c(2,2), bg="white")
 with(hpc2, {
 	plot(DateTime, as.numeric(data.matrix(Global_active_power)), ylab="Global Active Power", xlab="", type="l")
 	plot(DateTime, as.numeric(data.matrix(Voltage)), ylab="Voltage", xlab="datetime", type="l")
